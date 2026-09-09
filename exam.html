@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Online Examination</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="exam-header">
+
+    <div>
+        <h2>TECH SKILLS COMPUTER INSTITUTE</h2>
+        <p>Online Examination</p>
+    </div>
+
+    <div class="timer-box">
+
+        Time Left:
+        <span id="timer">30:00</span>
+
+    </div>
+
+</header>
+
+
+<div class="exam-container">
+
+    <div class="question-box">
+
+        <div class="question-number">
+
+            Question
+            <span id="questionNumber">1</span>
+            of 10
+
+        </div>
+
+
+        <h2 id="questionText">
+            Question will appear here
+        </h2>
+
+
+        <div id="optionsContainer">
+
+        </div>
+
+
+        <div class="navigation">
+
+            <button
+                id="previousBtn"
+                onclick="previousQuestion()"
+                class="secondary-btn"
+            >
+                Previous
+            </button>
+
+            <button
+                id="nextBtn"
+                onclick="nextQuestion()"
+                class="main-btn"
+            >
+                Next
+            </button>
+
+            <button
+                id="submitBtn"
+                onclick="submitExam()"
+                class="submit-btn"
+            >
+                Submit Exam
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="js/exam.js"></script>
+
+</body>
+</html>
