@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Login - Tech Skills</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <div class="login-box">
+
+        <div class="logo-area">
+            <div class="logo-circle">TS</div>
+            <h1>TECH SKILLS</h1>
+            <p>COMPUTER INSTITUTE</p>
+        </div>
+
+        <h2>Student Login</h2>
+
+        <form id="loginForm">
+
+            <label>Username</label>
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter Username"
+                required
+            >
+
+            <label>Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter Password"
+                required
+            >
+
+            <button type="submit" class="main-btn">
+                Login
+            </button>
+
+            <p id="errorMsg" class="error-message"></p>
+
+        </form>
+
+        <div class="demo-login">
+            <p><b>Demo Login</b></p>
+            <p>Username: student</p>
+            <p>Password: 1234</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>
