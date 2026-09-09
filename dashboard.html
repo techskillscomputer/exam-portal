@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="top-header">
+
+    <div>
+        <h2>TECH SKILLS COMPUTER INSTITUTE</h2>
+        <p>Student Examination Portal</p>
+    </div>
+
+    <button onclick="logout()" class="logout-btn">
+        Logout
+    </button>
+
+</header>
+
+
+<div class="dashboard-container">
+
+    <div class="welcome-box">
+
+        <h1>
+            Welcome,
+            <span id="studentName">Student</span>
+        </h1>
+
+        <p>
+            Welcome to your online examination portal.
+        </p>
+
+    </div>
+
+
+    <div class="exam-info">
+
+        <h2>Available Examination</h2>
+
+        <div class="exam-card">
+
+            <h3>General Computer Knowledge</h3>
+
+            <p>
+                <b>Total Questions:</b> 10
+            </p>
+
+            <p>
+                <b>Time:</b> 30 Minutes
+            </p>
+
+            <p>
+                <b>Total Marks:</b> 10
+            </p>
+
+            <button
+                onclick="startExam()"
+                class="main-btn"
+            >
+                Start Examination
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+const studentName =
+    localStorage.getItem("studentName");
+
+if (!studentName) {
+
+    window.location.href = "login.html";
+
+}
+
+document.getElementById("studentName").textContent =
+    studentName;
+
+
+function startExam() {
+
+    localStorage.removeItem("examScore");
+    localStorage.removeItem("examAnswers");
+
+    window.location.href = "exam.html";
+
+}
+
+
+function logout() {
+
+    localStorage.clear();
+
+    window.location.href = "login.html";
+
+}
+
+</script>
+
+</body>
+</html>
